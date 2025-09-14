@@ -45,7 +45,7 @@ res.status(201).json({
 
 export const remove = (req, res) => {
     const id = parseInt(req.params.id);
-    const index = barbies.finIndex(b => b.id === id);
+    const index = barbies.findIndex(b => b.id === id);
 
     if (index === -1) {
         return res.status(404).json({ message: "Barbie não encontrada para deletar!"});
